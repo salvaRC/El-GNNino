@@ -149,8 +149,6 @@ def read_ssta(index, data_dir, get_mask=False, stack_lon_lat=True, resolution=2.
             ssta_old_index = ssta.get_index('cord')
             ssta = ssta.dropna(dim='cord')
             print(f"Dropped {len(ssta_old_index) - len(ssta.get_index('cord'))} nodes.")
-            # print("Dropped coordinates:", set(ssta_old_index).difference(set(ssta.get_index("cord"))))
-            # print(flattened_ssta.loc["1970-01", (0, 290)]) --> will raise error
         else:
             ssta = ssta.fillna(fill_nan)
 
