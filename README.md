@@ -22,4 +22,14 @@ All reported models are saved [here](models).
 
 ## Running the experiments
 - To run the models from scratch just rerun the [corresponding notebook](experiment1.ipynb).
-     
+
+## Citation
+
+Please consider citing the following paper if you find it, or the code, helpful. Thank you!
+
+    @article{cachay2020graph,
+      title={Graph Neural Networks for Improved El Ni$\backslash$\~{} no Forecasting},
+      author={Cachay, Salva R{\"u}hling and Erickson, Emma and Bucker, Arthur Fender C and Pokropek, Ernest and Potosnak, Willa and Osei, Salomey and L{\"u}tjens, Bj{\"o}rn},
+      journal={NeurIPS Tackling Climate Change with Machine Learning Workshop. arXiv preprint arXiv:2012.01598},
+      year={2020}
+    }
