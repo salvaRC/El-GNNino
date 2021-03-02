@@ -32,12 +32,11 @@ class DataLoaderS(object):
                          start_date=test_dates[0], end_date=test_dates[1],
                          lon_min=args.lon_min, lon_max=args.lon_max,
                          lat_min=args.lat_min, lat_max=args.lat_max)
-        self.semantic_time_steps = (
-            train.get_index("time")[self.window + self.horizon - 1:],
-            val.get_index("time")[self.window + self.horizon - 1:],
-            test.get_index("time")[self.window + self.horizon - 1:]
-
-        )
+        self.semantic_time_steps = {
+            'train': train.get_index("time")[self.window + self.horizon - 1:],
+            'val': val.get_index("time")[self.window + self.horizon - 1:],
+            'test': test.get_index("time")[self.window + self.horizon - 1:]
+        }
 
         self.train = self._batchify(np.array(train))
         self.valid = self._batchify(np.array(val))
@@ -45,10 +44,9 @@ class DataLoaderS(object):
 
     def __str__(self):
         string = f"Training, Validation, Test samples = {self.T}, {self.valid[0].shape[0]}, {self.test[0].shape[0]}, " \
-                  f"#nodes = {self.n_nodes}, " \
-                  f"predicting {self.horizon} time steps in advance using {self.window} time steps."
+                 f"#nodes = {self.n_nodes}, " \
+                 f"predicting {self.horizon} time steps in advance using {self.window} time steps."
         return string
-
 
     def _batchify(self, data):
         Y_matrix = data[self.window + self.horizon - 1:, :]  # horizon = #time steps predicted in advance
@@ -56,7 +54,6 @@ class DataLoaderS(object):
 
         X = torch.zeros((timesteps, self.window, self.n_nodes))
         Y = torch.zeros((timesteps, self.n_nodes))
-
         for start, Y_i in enumerate(Y_matrix):
             end = start + self.window
             X[start, :, :] = torch.from_numpy(data[start:end, :])
@@ -83,4 +80,3 @@ class DataLoaderS(object):
 
 def normal_std(x):
     return x.std() * np.sqrt((len(x) - 1.) / (len(x)))
-

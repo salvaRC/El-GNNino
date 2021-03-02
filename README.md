@@ -22,7 +22,7 @@ This should be enough for Pycharm, for command line stuff you'll probably need t
 All reported models are saved [here](models).
 
 ## Running the experiments
-- To run the models from scratch just rerun the [corresponding notebook](experiment1.ipynb).
+- To run the models from scratch just rerun the [corresponding notebook](experiments.ipynb).
 
 ## Citation
 

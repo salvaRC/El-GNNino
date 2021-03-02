@@ -41,7 +41,7 @@ class data_reader(object):
         """
         self.startdate = pd.to_datetime(startdate)
         self.enddate = pd.to_datetime(enddate) + pd.tseries.offsets.MonthEnd(0)
-        self.data_dir = data_dir + "processed/"
+        self.data_dir = data_dir  # + "processed/"
 
         self.lon_min = lon_min
         self.lon_max = lon_max
