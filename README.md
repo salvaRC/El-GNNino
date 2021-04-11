@@ -1,4 +1,8 @@
-# Graph Neural Networks for Improved El Nino Forecasting (NeurIPS 2020 CCAI Workshop proposal)
+# Check out our ***most recent code & paper*** (that builds upon this proposal paper) here: https://github.com/salvaRC/Graphino
+
+## Graph Neural Networks for Improved El Nino Forecasting (NeurIPS 2020 CCAI Workshop proposal)
+
+## Abstract
 *Deep learning-based models have recently outperformed state-of-the-art seasonal forecasting models, such as for predicting El Nino-Southern Oscillation (ENSO).
 However, current deep learning models are based on convolutional neural networks which are difficult to interpret and can fail to model large-scale atmospheric patterns called teleconnections. We propose the first application of spatiotemporal graph neural networks (GNNs), that can model teleconnections for seasonal forecasting. Our GNN outperforms other state-of-the-art machine learning-based (ML) models for forecasts up to 3 month ahead. The explicit modeling of information flow via edges makes our model more interpretable, and our model indeed is shown to learn sensible edge weights that correlate with the ENSO anomaly pattern.*
 
