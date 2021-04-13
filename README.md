@@ -1,4 +1,4 @@
-# Check out our ***most recent code & paper*** (that builds upon this proposal paper) here: https://github.com/salvaRC/Graphino
+# Check out our ***most recent [code](https://github.com/salvaRC/Graphino) & [paper](https://arxiv.org/abs/2104.05089)*** (that builds upon this proposal paper)
 
 ## Graph Neural Networks for Improved El Nino Forecasting (NeurIPS 2020 CCAI Workshop proposal)
 
